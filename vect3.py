@@ -9,40 +9,50 @@ class Vect3:
         self.__y = y
         self.__z = z
 
-    # x setter/getter
+    # Informal string rapresentation
+    def __str__(self):
+        return f'[{self.__x}, {self.__y}, {self.__z}]'
+
+    # Official string rapresentation
+    def __repr__(self):
+        return f'{self.__class__.__name__}({self.__x}, {self.__y}, {self.__z})'
+
+    # x getter
     def __get_x(self):
         return self.__x
 
+    # x setter
     def __set_x(self, x):
         self.__x = x
 
+    # x property
     x = property(__get_x, __set_x)
 
-    # y setter/getter
+    # y getter
     def __get_y(self):
         return self.__y
 
+    # y setter
     def __set_y(self, y):
         self.__y = y
 
+    # y property
     y = property(__get_y, __set_y)
 
-    # z setter/getter
+    # z getter
     def __get_z(self):
         return self.__z
 
+    # z getter
     def __set_z(self, z):
         self.__z = z
 
+    # z property
     z = property(__get_z, __set_z)
 
-    # String
-    def __str__(self):
-        return f'{self.__class__.__name__}({self.__x}, {self.__y}, {self.__z})'
-
-    # absolute value
+    # Absolute value
     def abs(self):
-        return math.sqrt(self.__x ** 2 + self.__y ** 2 + self.__x ** 2)
+        return math.sqrt(self.__x ** 2 + self.__y ** 2 + self.__z ** 2)
 
     # Overloading + operator
     def __add__(self, o):
@@ -67,9 +77,11 @@ class Vect3:
 # ----------------------------------------------------------
               
 a = Vect3(1, 2, 3)
-b = Vect3(4, 5, 6)
+b = Vect3(z=6, y=5, x=4)
 
 print(a, b)
+print(str(a), str(b))
+print(repr(a), repr(b))
 
 print(a.abs())
 

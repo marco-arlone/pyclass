@@ -33,7 +33,14 @@ print(p1.y)
 p2 = Point(.1, .1)
 print(p1 + p2)
 
-# Record example
-r = Record(12345678, 'Roj', 'via Vercellone, 11', 'Biella')
-print(r)
-print(r.id)
+# Record examples
+r1 = Record(1, 'Roj', 'via Vercellone, 11', 'Biella')
+r2 = Record(2, 'Roj', 'via S. Agata, 9', 'Biella')
+
+# Print full records
+print(r1)
+print(r2)
+
+# Print a single component
+print(r1.id)
+print(r2.id)
