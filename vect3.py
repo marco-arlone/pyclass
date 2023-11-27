@@ -71,7 +71,7 @@ class Vect3:
         return self.__x == o.__x and self.__y == o.__y and self.__z == o.__z
 
     # Overloading != operator
-    def __eq__(self, o):
+    def __ne__(self, o):
         return self.__x != o.__x or self.__y != o.__y or self.__z != o.__z
 
 # ----------------------------------------------------------
